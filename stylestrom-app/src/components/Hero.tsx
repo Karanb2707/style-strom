@@ -14,10 +14,12 @@ const Hero: React.FC = () => {
     setLoadedVideos((prev) => prev + 1);
   };
 
+  const upComingVideoIndex = (currentIndex % totalVideos) + 1;
+
   const handleMiniVdClick = () => {
     setHasClicked(true);
 
-    setCurrentIndex((prevIndex) => prevIndex + 1);
+    setCurrentIndex(upComingVideoIndex);
     console.log("index", currentIndex);
   };
 
