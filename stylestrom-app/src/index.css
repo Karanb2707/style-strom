@@ -27,8 +27,24 @@ body {
 }
 
 @theme {
+  /* fonts */
   --font-circular: "circular-web", sans-serif;
   --font-general: "general", sans-serif;
   --font-robertM: "robert-medium", sans-serif;
   --font-robertR: "robert-regular", sans-serif;
+
+  /* colors */
+  /* blue color */
+  --color-blue-50: #dfdff0;
+  --color-blue-75: #dfdff2;
+  --color-blue-100: #f0f2fa;
+  --color-blue-200: #010101;
+  --color-blue-300: #4fb7dd;
+
+  /* violet color */
+  --color-violet-300: #5724ff;
+
+  /* yellow color */
+  --color-yellow-100: #8e983f;
+  --color-yellow-300: #edff66;
 }
