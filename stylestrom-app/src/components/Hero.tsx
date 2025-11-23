@@ -73,6 +73,20 @@ const Hero: React.FC = () => {
             onLoadedData={handleVideoLoad}
           />
         </div>
+        <h1 className="hero-heading absolute bottom-5 right-5 z-50 text-blue-50 tracking-tighter">
+          Gami<span className="text-orange-400">n</span>g
+        </h1>
+        <div className="absolute left-0 top-0 z-40 size-full">
+          <div className="mt-12 px-5 sm:px-10">
+            <h1 className="hero-heading text-blue-50">
+              Redefi<span className="text-orange-400">n</span>e
+            </h1>
+            <p className="m-2 max-w-64 text-blue-100">
+              Enter the MetaGame Layer <br />
+              Unleash the play Economy
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
