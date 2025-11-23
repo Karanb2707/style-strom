@@ -1,6 +1,8 @@
 import React, { useRef, useState } from "react";
 import Button from "./Button";
 import { Navigation } from "lucide-react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Hero: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(1);
@@ -27,8 +29,36 @@ const Hero: React.FC = () => {
     console.log("video index", currentIndex);
   };
 
+  useGSAP(
+    () => {
+      if (hasClicked) {
+        gsap.set("#next-video", { visibility: "visible" });
+
+        gsap.to("#next-video", {
+          transformOrigin: "center center",
+          scale: 1,
+          width: "100%",
+          height: "100%",
+          duration: 1,
+          ease: "power1.inOut",
+          onStart: () => {
+            nextMiniVideoRef.current?.play();
+            mainVideoRef.current?.play();
+          },
+        });
+
+        gsap.from("#current-video", {
+          transformOrigin: "center center",
+          scale: 0,
+          duration: 1,
+          ease: "power1.inOut",
+        });
+      }
+    },
+    { dependencies: [currentIndex], revertOnUpdate: true }
+  );
+
   const getVideoSource = (index: number): string => {
-    console.log("getting video source for index:", index);
     return `/videos/hero-${index}.mp4`;
   };
 
