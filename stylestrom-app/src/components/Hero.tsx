@@ -1,4 +1,6 @@
 import React, { useRef, useState } from "react";
+import Button from "./Button";
+import { Navigation } from "lucide-react";
 
 const Hero: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(1);
@@ -85,9 +87,18 @@ const Hero: React.FC = () => {
               Enter the MetaGame Layer <br />
               Unleash the play Economy
             </p>
+            <Button
+              id="watch-trailer"
+              title="Watch Trailer"
+              leftIcon={<Navigation width={16} height={16} />}
+              containerClass="bg-yellow-300 flex-center gap-2"
+            />
           </div>
         </div>
       </div>
+      <h1 className="hero-heading absolute bottom-5 right-5 text-black tracking-tighter">
+        Gami<span className="text-orange-400">n</span>g
+      </h1>
     </div>
   );
 };
