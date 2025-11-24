@@ -29,6 +29,7 @@ const Hero: React.FC = () => {
     console.log("video index", currentIndex);
   };
 
+  // Zoom animation
   useGSAP(
     () => {
       if (hasClicked) {
@@ -57,6 +58,14 @@ const Hero: React.FC = () => {
     },
     { dependencies: [currentIndex], revertOnUpdate: true }
   );
+
+  // Scroll animation
+  useGSAP(() => {
+    gsap.set("#video-frame", {
+      clipPath: "polygon(14% 0%, 72% 0%, 90% 90%, 0% 100%)",
+      borderRadius: "0 0 40% 10%",
+    });
+  });
 
   const getVideoSource = (index: number): string => {
     return `/videos/hero-${index}.mp4`;

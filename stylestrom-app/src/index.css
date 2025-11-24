@@ -36,7 +36,7 @@ body {
 }
 
 @utility hero-heading {
-  @apply uppercase font-black text-4xl sm:text-7xl;
+  @apply uppercase font-black text-4xl sm:text-9xl;
 }
 
 @utility about-subtext {
