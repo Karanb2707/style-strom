@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import Button from "./Button";
 import { Navigation } from "lucide-react";
 import { useGSAP } from "@gsap/react";
@@ -16,7 +16,13 @@ const Hero: React.FC = () => {
   const mainVideoRef = useRef<HTMLVideoElement | null>(null);
 
   const handleVideoLoad = () => {
-    setLoadedVideos((prev) => prev + 1);
+    setLoadedVideos((prev) => {
+      const newCount = prev + 1;
+      if (newCount === totalVideos - 1) {
+        setIsLoading(false);
+      }
+      return newCount;
+    });
   };
 
   const upComingVideoIndex =
@@ -28,13 +34,6 @@ const Hero: React.FC = () => {
     setCurrentIndex(upComingVideoIndex);
     console.log("video index", currentIndex);
   };
-
-  // useEffect to check if all videos are loaded
-  useEffect(() => {
-    if (loadedVideos === totalVideos - 1) {
-      setIsLoading(false);
-    }
-  }, [loadedVideos]);
 
   // Zoom animation
   useGSAP(
