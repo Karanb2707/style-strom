@@ -27,13 +27,20 @@ const About: React.FC = () => {
   return (
     <div id="about" className="min-h-screen w-screen">
       <div className="relative mb-8 mt-12 flex flex-col items-center gap-8">
-        <h2 className="text-sm uppercase tracking-wider font-light">
+        <h2 className="text-sm tracking-widest uppercase font-semibold">
           Welcome to{" "}
-          <span className="text-3xl mx-2 font-bold text-orange-600">
-            <span className="text-black text-5xl">S</span>tyle
-            <span className="text-black text-5xl">S</span>trom
+          <span className="mx-2 text-orange-600 text-4xl font-['Science_Gothic']">
+            <span className="text-black text-6xl font-['Science_Gothic']">
+              S
+            </span>
+            tyle
+            <span className="text-black text-6xl font-['Science_Gothic']">
+              S
+            </span>
+            trom
           </span>
         </h2>
+
         <AnimatedText
           title="Unleash Your Style, <br/> Rewrite the Motion "
           containerClass="mt-2 !text-black text-center"
