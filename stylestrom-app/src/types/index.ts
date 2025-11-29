@@ -10,5 +10,5 @@ export interface ButtonProps {
 
 export interface AnimatedTitleProps {
   title: string;
-  className?: string;
+  containerClass?: string;
 }

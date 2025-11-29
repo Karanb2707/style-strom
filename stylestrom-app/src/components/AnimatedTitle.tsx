@@ -1,17 +1,43 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import type { AnimatedTitleProps } from "../types";
+import gsap from "gsap";
 
-const AnimatedText: React.FC<AnimatedTitleProps> = ({ title, className }) => {
+const AnimatedText: React.FC<AnimatedTitleProps> = ({
+  title,
+  containerClass,
+}) => {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const titleAnimation = gsap.timeline({
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "100 bottom",
+          end: "center bottom",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      titleAnimation.to(".animated-word", {
+        opacity: 1,
+        transform: "translate3d(0,0,0) rotateY(0deg) rotateX(0deg)",
+        ease: "power2.inOut",
+        stagger: 0.02,
+      });
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <div
-      classNameftext-center text-4xl uppercase mx-10 tracking-tight md:text-[3.5rem] font-extrabold bg-gradient-to-r from-black via-orange-500 to-orange-600 bg-clip-text text-transparent leading-tight`}
-    >
+    <div ref={containerRef} className={`animated-title ${containerClass}`}>
       {title.split("<br/>").map((line, index) => (
         <div
           key={index}
-          className="flex justify-center flex-wrap gap-2 px-10 md:gap-3"
+          className="flex-center max-w-full flex-wrap gap-2 px-10 md:gap-4"
         >
-          {line.split("").map((char, i) => (
+          {line.split(" ").map((char, i) => (
             <span
               key={i}
               className="animated-word"

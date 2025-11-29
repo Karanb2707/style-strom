@@ -33,12 +33,15 @@ const About: React.FC = () => {
             StyleStrom
           </span>
         </h2>
-        <AnimatedText title="Unleash Your Style, <b>R</b></n>ewrite the Motion, <br/> and Let Your Imagi<b>n</b>ation Move Beyond Limits." />
+        <AnimatedText
+          title="Unleash Your Style, <br/> Rewrite the Motion "
+          containerClass="mt-2 !text-black text-center"
+        />
         <div className="text-center space-y-1">
-          <p className="text-black text-lg font-light tracking-wide">
+          <p className="text-black text-[14px] md:text-lg font-light tracking-wide">
             Where creativity flows into every frame you imagine.
           </p>
-          <p className="text-orange-700 text-lg font-light tracking-wide">
+          <p className="text-orange-700 text-[14px] md:text-lg font-light tracking-wide">
             A new wave of animation that moves with your vibe.
           </p>
         </div>
