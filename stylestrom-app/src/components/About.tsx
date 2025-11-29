@@ -26,16 +26,22 @@ const About: React.FC = () => {
   return (
     <div id="about" className="min-h-screen w-screen">
       <div className="relative mb-8 mt-12 flex flex-col items-center gap-5">
-        <h2 className="text-sm uppercase">
+        <h2 className="text-sm uppercase tracking-wider font-light">
           Welcome to{" "}
-          <span className="text-2xl mx-1 font-semibold">StyleStrom</span>
+          <span className="text-3xl mx-2 font-bold bg-gradient-to-r from-orange-600 to-black bg-clip-text text-transparent">
+            StyleStrom
+          </span>
         </h2>
-        <div className="mt-5 text-center text-4xl uppercase mx-10 tracking-tight md:text-[3rem]">
+        <div className="mt-3 text-center text-4xl uppercase mx-10 tracking-tight md:text-[3.5rem] font-extrabold bg-gradient-to-r from-black via-orange-500 to-orange-600 bg-clip-text text-transparent leading-tight">
           Unleash Your Style, Rewrite the Motion.
         </div>
-        <div className="">
-          <p>Where creativity flows into every frame you imagine.</p>
-          <p>A new wave of animation that moves with your vibe.</p>
+        <div className="text-center space-y-1">
+          <p className="text-black text-lg font-light tracking-wide">
+            Where creativity flows into every frame you imagine.
+          </p>
+          <p className="text-orange-700 text-lg font-light tracking-wide">
+            A new wave of animation that moves with your vibe.
+          </p>
         </div>
       </div>
 
