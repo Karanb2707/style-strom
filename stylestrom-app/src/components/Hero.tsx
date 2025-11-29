@@ -137,7 +137,7 @@ const Hero: React.FC = () => {
 
           <video
             src={getVideoSource(currentIndex)}
-            autoPlay
+            // autoPlay
             loop
             muted
             className="absolute left-0 top-0 size-full object-cover object-center"
@@ -148,7 +148,7 @@ const Hero: React.FC = () => {
           Gami<span className="text-orange-400">n</span>g
         </h1>
         <div className="absolute left-0 top-0 z-40 size-full">
-          <div className="mt-12 px-5 sm:px-10">
+          <div className="mt-18 px-5 sm:px-10">
             <h1 className="hero-heading text-blue-50">
               Redefi<span className="text-orange-400">n</span>e
             </h1>

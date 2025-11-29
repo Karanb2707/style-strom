@@ -29,8 +29,9 @@ const About: React.FC = () => {
       <div className="relative mb-8 mt-12 flex flex-col items-center gap-8">
         <h2 className="text-sm uppercase tracking-wider font-light">
           Welcome to{" "}
-          <span className="text-3xl mx-2 font-bold bg-gradient-to-r from-orange-600 to-black bg-clip-text text-transparent">
-            StyleStrom
+          <span className="text-3xl mx-2 font-bold text-orange-600">
+            <span className="text-black text-5xl">S</span>tyle
+            <span className="text-black text-5xl">S</span>trom
           </span>
         </h2>
         <AnimatedText
@@ -41,7 +42,7 @@ const About: React.FC = () => {
           <p className="text-black text-[14px] md:text-lg font-light tracking-wide">
             Where creativity flows into every frame you imagine.
           </p>
-          <p className="text-orange-700 text-[14px] md:text-lg font-light tracking-wide">
+          <p className="text-orange-600 text-[14px] md:text-lg font-light tracking-wide">
             A new wave of animation that moves with your vibe.
           </p>
         </div>
