@@ -1,6 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import AnimatedText from "./AnimatedTitle";
 gsap.registerPlugin(ScrollTrigger);
 
 const About: React.FC = () => {
@@ -25,16 +26,14 @@ const About: React.FC = () => {
 
   return (
     <div id="about" className="min-h-screen w-screen">
-      <div className="relative mb-8 mt-12 flex flex-col items-center gap-5">
+      <div className="relative mb-8 mt-12 flex flex-col items-center gap-8">
         <h2 className="text-sm uppercase tracking-wider font-light">
           Welcome to{" "}
           <span className="text-3xl mx-2 font-bold bg-gradient-to-r from-orange-600 to-black bg-clip-text text-transparent">
             StyleStrom
           </span>
         </h2>
-        <div className="mt-3 text-center text-4xl uppercase mx-10 tracking-tight md:text-[3.5rem] font-extrabold bg-gradient-to-r from-black via-orange-500 to-orange-600 bg-clip-text text-transparent leading-tight">
-          Unleash Your Style, Rewrite the Motion.
-        </div>
+        <AnimatedText title="Unleash Your Style, <b>R</b></n>ewrite the Motion, <br/> and Let Your Imagi<b>n</b>ation Move Beyond Limits." />
         <div className="text-center space-y-1">
           <p className="text-black text-lg font-light tracking-wide">
             Where creativity flows into every frame you imagine.

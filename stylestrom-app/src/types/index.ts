@@ -1,4 +1,4 @@
-// define button types here
+// define types here
 
 export interface ButtonProps {
   id: string;
@@ -6,4 +6,9 @@ export interface ButtonProps {
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
   containerClass?: string;
+}
+
+export interface AnimatedTitleProps {
+  title: string;
+  className?: string;
 }
