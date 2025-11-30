@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Button from "./Button";
 import { Navigation } from "lucide-react";
 
@@ -11,7 +11,18 @@ const Navbar: React.FC = () => {
   const navContainerRef = useRef<HTMLDivElement | null>(null);
   const audioElementRef = useRef<HTMLAudioElement | null>(null);
 
-  const toggleAudioIndicator = () => {};
+  const toggleAudioIndicator = () => {
+    setIsAudioPlaying((prev) => !prev);
+    setIsIndicatorActive((prev) => !prev);
+  };
+
+  useEffect(() => {
+    if (isAudioPlaying) {
+      audioElementRef.current?.play();
+    } else {
+      audioElementRef.current?.pause();
+    }
+  }, [isAudioPlaying]);
 
   return (
     <div
@@ -48,11 +59,17 @@ const Navbar: React.FC = () => {
               className="ml-10 flex items-center space-x-0.5"
               onClick={toggleAudioIndicator}
             >
-              <audio ref={audioElementRef} src="/audio/loop.mp3" loop>
-                {[1, 2, 3, 4].map((bar) => (
-                  <div key={bar} className={`w-3 h-2`}></div>
-                ))}
-              </audio>
+              <audio ref={audioElementRef} src="/audio/loop.mp3" loop />
+
+              {[1, 2, 3, 4].map((bar) => (
+                <div
+                  key={bar}
+                  className={`indicator-line ${
+                    isIndiacatorActive ? "active" : ""
+                  }`}
+                  style={{ animationDelay: `${bar * 0.1}s` }}
+                />
+              ))}
             </button>
           </div>
         </nav>
