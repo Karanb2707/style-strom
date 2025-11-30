@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(1);
   const [hasClicked, setHasClicked] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [loadedVideos, setLoadedVideos] = useState<number>(0);
+  const [, setLoadedVideos] = useState<number>(0);
 
   const totalVideos = 4;
 
@@ -35,7 +35,6 @@ const Hero: React.FC = () => {
     setHasClicked(true);
 
     setCurrentIndex(upComingVideoIndex);
-    console.log("video index", currentIndex);
   };
 
   // Zoom animation

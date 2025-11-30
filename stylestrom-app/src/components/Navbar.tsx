@@ -1,15 +1,46 @@
 import React, { useRef, useState, useEffect } from "react";
 import Button from "./Button";
 import { Navigation } from "lucide-react";
+import { useWindowScroll } from "react-use";
+import { gsap } from "gsap";
 
 const navItems = ["Nexus", "Vault", "Prologue", "About", "Contact"];
 
 const Navbar: React.FC = () => {
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
   const [isIndiacatorActive, setIsIndicatorActive] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isNavVisible, setIsNavVisible] = useState(true);
 
   const navContainerRef = useRef<HTMLDivElement | null>(null);
   const audioElementRef = useRef<HTMLAudioElement | null>(null);
+
+  const { y: currentScrollY } = useWindowScroll();
+
+  useEffect(() => {
+    setLastScrollY((prev) => {
+      if (currentScrollY === 0) {
+        setIsNavVisible(true);
+        navContainerRef.current?.classList.remove("floating-nav");
+      } else if (currentScrollY > prev) {
+        setIsNavVisible(false);
+        navContainerRef.current?.classList.add("floating-nav");
+      } else if (currentScrollY < prev) {
+        setIsNavVisible(true);
+        navContainerRef.current?.classList.add("floating-nav");
+      }
+
+      return currentScrollY;
+    });
+  }, [currentScrollY, lastScrollY]);
+
+  useEffect(() => {
+    gsap.to(navContainerRef.current, {
+      y: isNavVisible ? 0 : -100,
+      opacity: isNavVisible ? 1 : 0,
+      duration: 0.2,
+    });
+  }, [isNavVisible]);
 
   const toggleAudioIndicator = () => {
     setIsAudioPlaying((prev) => !prev);
