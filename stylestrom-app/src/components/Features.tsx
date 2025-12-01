@@ -7,10 +7,11 @@ const Features = () => {
             Elevate Your Style. Define Your Identity.
           </p>
           <p className="max-w-d text-lg text-blue-50 opacity-50">
-            Step into a world where fashion meets expression. StyleStrom
-            empowers you to explore bold trends, unique looks, and endless
-            creativity. Redefine your wardrobe — and yourself — one style at a
-            time.
+            StyleStrom is where creativity meets confidence, helping you express
+            yourself through bold and effortless style. From trend-driven looks
+            to timeless essentials, every piece is crafted to elevate your
+            personality. Explore, experiment, and redefine what fashion means to
+            you. Your style journey starts here.
           </p>
         </div>
       </div>
