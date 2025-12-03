@@ -12,7 +12,6 @@ const Features = () => {
             to timeless essentials, every piece is crafted to elevate your
             personality. Explore, experiment, and redefine what fashion means to
             you. Your style journey starts here.
-            
           </p>
         </div>
       </div>
