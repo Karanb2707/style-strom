@@ -20,8 +20,8 @@ const Features = () => {
         <div className="border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh] ">
           <BentoCard
             src="videos/feature-1.mp4"
-            title="Base Card"
-            description="The essential foundation for your style journey."
+            title="Style Unlocked"
+            description="Craft your signature look with effortless precision and elevate your everyday style into a bold expression of confidence that turns heads wherever you go."
             isComingSoon={false}
           />
         </div>
