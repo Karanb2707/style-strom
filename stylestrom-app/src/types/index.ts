@@ -12,3 +12,9 @@ export interface AnimatedTitleProps {
   title: string;
   containerClass?: string;
 }
+export interface BentoCardProps {
+  src: string;
+  title: string;
+  description: string;
+  isComingSoon?: boolean;
+}
