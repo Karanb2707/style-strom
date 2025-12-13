@@ -4,7 +4,7 @@ const Features = () => {
   return (
     <section className="bg-black pb-52">
       <div className="container mx-auto px-3 md:px-12">
-        <div className="px-2 py-12 ">
+        <div className="px-34 py-32">
           <p className="text-2xl font-semibold text-blue-50 mb-1">
             Elevate Your Style. Define Your Identity.
           </p>
@@ -50,11 +50,21 @@ const Features = () => {
           </div>
 
           <div className="bento-tilt_2">
-            <div className="flex flex-col size-full justify-between bg-blue-300 p-5">
+            <div className="flex flex-col size-full justify-between bg-blue-600 p-5">
               <h1 className="bento-title max-w-64 text-black">
                 More coming soon!
               </h1>
             </div>
+          </div>
+
+          <div className="bento-tilt_2">
+            <video
+              src="/videos/feature-5.mp4"
+              loop
+              muted
+              autoPlay
+              className="size-full object-cover object-center"
+            />
           </div>
         </div>
       </div>
