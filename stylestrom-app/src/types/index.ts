@@ -18,3 +18,8 @@ export interface BentoCardProps {
   description: string;
   isComingSoon?: boolean;
 }
+
+export interface BentoTiltProps {
+  children: React.ReactNode;
+  className?: string; 
+}
