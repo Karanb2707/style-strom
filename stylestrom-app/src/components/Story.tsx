@@ -78,6 +78,15 @@ const Story = () => {
             <RoundCorner />
           </div>
         </div>
+
+        <div className="-mt-80 flex w-full justify-center md:-mt-64 md:me-44 md:justify-end">
+          <div className="flex h-full w-fit flex-col items-center md:items-start">
+            <p className="mt-3 max-w-sm text-center font-light text-violet-50 md:text-start">
+              Style Storm makes it easy to discover and style the latest fashion
+              trends. Create outfits that match your vibe in just a few clicks.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );

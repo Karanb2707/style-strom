@@ -67,7 +67,7 @@ body {
 }
 
 @utility bento-title {
-  @apply uppercase md:text-6xl text-4xl font-black;
+  @apply uppercase md:text-6xl text-3xl font-black;
 }
 
 @utility story-img-container {

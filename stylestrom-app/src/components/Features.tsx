@@ -44,7 +44,7 @@ const Features = () => {
   return (
     <section className="bg-black pb-24">
       <div className="container mx-auto px-3 md:px-12">
-        <div className="px-54 py-26">
+        <div className="px-4 lg:px-60 py-12 lg:py-22">
           <p className="text-2xl font-semibold text-blue-50 mb-1">
             Elevate Your Style. Define Your Identity.
           </p>
@@ -90,8 +90,8 @@ const Features = () => {
           </BentoTilt>
 
           <BentoTilt className="bento-tilt_2">
-            <div className="flex flex-col size-full justify-between bg-purple-800 p-5">
-              <h1 className="bento-title max-w-64 text-black">
+            <div className="flex flex-col size-full justify-between bg-purple-800 p-3">
+              <h1 className="bento-title max-w-20 text-black">
                 More coming soon!
               </h1>
             </div>
