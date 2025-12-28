@@ -42,7 +42,7 @@ const BentoTilt = ({ children, className = "" }: BentoTiltProps) => {
 
 const Features = () => {
   return (
-    <section className="bg-black pb-24">
+    <section id="features" className="bg-black pb-24">
       <div className="container mx-auto px-3 md:px-12">
         <div className="px-4 lg:px-60 py-12 lg:py-22">
           <p className="text-2xl font-semibold text-blue-50 mb-1">

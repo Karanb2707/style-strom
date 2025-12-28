@@ -4,7 +4,7 @@ import { Navigation } from "lucide-react";
 import { useWindowScroll } from "react-use";
 import { gsap } from "gsap";
 
-const navItems = ["Nexus", "Vault", "Prologue", "About", "Contact"];
+const navItems = ["Nexus", "Story", "Features", "About", "Contact"];
 
 const Navbar: React.FC = () => {
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
