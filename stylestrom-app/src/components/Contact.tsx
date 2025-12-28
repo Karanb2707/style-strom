@@ -14,7 +14,7 @@ const ImageClipBox = ({ src, clipClass }: ImageClipBoxProps) => (
 
 const Contact = () => {
   return (
-    <div id="contact" className="my-12 min-h-96 w-screen">
+    <div id="contact" className="py-16 min-h-96 w-screen">
       <div className="relative rounded-lg bg-black py-18 text-blue-50 sm:overflow-hidden">
         <div className="absolute -left-20 top-0 hidden h-full w-72 overflow-hidden sm:block lg:left-20 lg:w-96">
           <ImageClipBox
