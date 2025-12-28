@@ -25,7 +25,7 @@ const About: React.FC = () => {
   });
 
   return (
-    <div id="about" className="min-h-screen w-screen">
+    <div id="about" className="min-h-screen w-screen pt-8">
       <div className="relative mb-8 mt-12 flex flex-col items-center gap-8">
         <h2 className="text-sm tracking-widest uppercase font-semibold">
           Welcome to{" "}
